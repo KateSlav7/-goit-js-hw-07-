@@ -29,18 +29,9 @@ function createCardsMarkup(item) {
     })
     .join("");
 }
-galleryDivEl.addEventListener("click", onSelectImage);
-
-function onSelectImage(evt) {
-  evt.preventDefault();
-  if (evt.target.nodeName !== "IMG") {
-    return;
-  }
-  const imgUrl = evt.target.dataset.source;
 
   let gallery = new SimpleLightbox(".gallery a", {
     captions: true,
     captionsData: "alt",
     captionDelay: 250,
   });
-}
